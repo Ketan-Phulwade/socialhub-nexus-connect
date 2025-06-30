@@ -3,6 +3,7 @@ import Layout from '../components/Layout';
 import NewsFeed from '../components/NewsFeed';
 import PostComposer from '../components/PostComposer';
 import RightSidebar from '../components/RightSidebar';
+import Stories from '../components/Stories';
 
 const Index = () => {
   return (
@@ -10,6 +11,7 @@ const Index = () => {
       <div className="flex">
         {/* Main Content */}
         <div className="flex-1 max-w-2xl mx-auto px-4 py-6">
+          <Stories />
           <PostComposer />
           <NewsFeed />
         </div>
