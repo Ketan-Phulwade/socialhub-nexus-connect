@@ -1,13 +1,25 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import Layout from '../components/Layout';
+import NewsFeed from '../components/NewsFeed';
+import PostComposer from '../components/PostComposer';
+import RightSidebar from '../components/RightSidebar';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <Layout>
+      <div className="flex">
+        {/* Main Content */}
+        <div className="flex-1 max-w-2xl mx-auto px-4 py-6">
+          <PostComposer />
+          <NewsFeed />
+        </div>
+        
+        {/* Right Sidebar */}
+        <div className="hidden xl:block w-80 p-4">
+          <RightSidebar />
+        </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 
